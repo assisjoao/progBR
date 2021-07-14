@@ -1,0 +1,19 @@
+{
+  "name": "pacotes",
+  "version": "1.0.0",
+  "description": "Função Matemática em pacotes",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/assisjoao/progBR.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/assisjoao/progBR/issues"
+  },
+  "homepage": "https://github.com/assisjoao/progBR#readme"
+}
