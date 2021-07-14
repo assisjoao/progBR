@@ -1,8 +1,8 @@
 {
-  "name": "pacotes",
+  "name": "exercicios",
   "version": "1.0.0",
-  "description": "Função Matemática em pacotes",
-  "main": "index.js",
+  "description": "",
+  "main": "apps.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/assisjoao/progBR/issues"
   },
-  "homepage": "https://github.com/assisjoao/progBR#readme"
+  "homepage": "https://github.com/assisjoao/progBR#readme",
+  "dependencies": {
+    "sharp": "^0.28.3"
+  }
 }
