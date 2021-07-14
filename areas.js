@@ -1,0 +1,1 @@
+module.exports.area_quadrado = function quadrado(lado) { return lado*lado };
