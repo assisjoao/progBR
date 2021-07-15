@@ -2,9 +2,14 @@ const http = require('http');
 const url = require('url');
 const fs = require('fs');
 
+function handleFile (req, res) {
+    let path = url.parse(req.url).pathname;
+
+}
+
+
 http.createServer((request, response) =>{
 
-    let path = url.parse(request.url).pathname;
     let fileName = "." + path;
 
     fs.readFile(fileName, (err, data) => {
@@ -15,11 +20,10 @@ http.createServer((request, response) =>{
             response.writeHead(200, {"Content-Type": "text/html"});
             response.write(data);
             response.end();
-
-
         }
     })
     response.end();
+
 
 
 }).listen(3000, (err)=>{
