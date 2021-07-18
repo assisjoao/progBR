@@ -8,7 +8,9 @@ function handleFile (req, res) {
 
 http.createServer((request, response) =>{
 
+
     let fileName = "." + path;
+
 
     fs.readFile(fileName, (err, data) => {
         if (err){
@@ -25,7 +27,7 @@ http.createServer((request, response) =>{
 }).listen(3000, (err)=>{
     if (err){
     console.log(err)
-    } else [
+    } else {
         console.log("Servidor Rodando na porta 3000")
-    ]
+    }
 })
