@@ -4,9 +4,7 @@ const fs = require('fs');
 
 function handleFile (req, res) {
     let path = url.parse(req.url).pathname;
-
 }
-
 
 http.createServer((request, response) =>{
 
@@ -24,13 +22,10 @@ http.createServer((request, response) =>{
     })
     response.end();
 
-
-
 }).listen(3000, (err)=>{
     if (err){
     console.log(err)
     } else [
         console.log("Servidor Rodando na porta 3000")
     ]
-
 })
