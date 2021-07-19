@@ -8,9 +8,7 @@ function handleFile (req, res) {
 
 http.createServer((request, response) =>{
 
-
     let fileName = "." + path;
-
 
     fs.readFile(fileName, (err, data) => {
         if (err){
@@ -22,6 +20,7 @@ http.createServer((request, response) =>{
             response.end();
         }
     })
+
     response.end();
 
 }).listen(3000, (err)=>{
