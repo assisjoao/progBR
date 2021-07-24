@@ -21,15 +21,6 @@ http.createServer((request, response) =>{
             response.end();
         }
     })
-
-
-
-    
-
-    
-
-    
-
     response.end();
 
 }).listen(3000, (err)=>{
