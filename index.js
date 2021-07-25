@@ -7,6 +7,13 @@ function handleFile (req, res) {
 }
 
 
+
+
+
+
+
+
+
 http.createServer((request, response) =>{
 
     let fileName = "." + path;
