@@ -6,14 +6,6 @@ function handleFile (req, res) {
     let path = url.parse(req.url).pathname;
 }
 
-
-
-
-
-
-
-
-
 http.createServer((request, response) =>{
 
     let fileName = "." + path;
