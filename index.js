@@ -4,7 +4,7 @@ const app = express();
 
 app.get("/", (req, res) => {
     console.log(req);
-    res.send("<h1>Hello W GET</h1>");
+    res.json({ name: "Joao"});
 });
 
 app.listen(3000, () => console.log('Server Running...'));
