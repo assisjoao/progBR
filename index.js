@@ -14,14 +14,32 @@ app.get("/", (req, res) => {
    res.send("Hello W")
 });
 
-app.get("/alunos", (req, res) => {
-    res.json(JSON.stringify(alunos))
+
+app.get("/aluno", (req, res, next) => {
+    console.log(req.body);
+
+    let aluno = alunos[req.body.id];
+    if (aluno) {
+        res.json(aluno);
+    } else {
+        next();
+    }
 });
 
-app.get("/aluno", (req, res) => {
-    console.log(req.body);
-    let aluno = alunos[req.body.id]
-    res.json(aluno);
+app.get("/aluno", (req, res, next) => {
+    console.log(req.query);
+
+    let aluno = alunos[req.query.id];
+    if (aluno) {
+        res.json(aluno);
+    } else {
+        res.send("Not finded");
+    }
+});
+
+
+app.get("/alunos/all", (req, res) => {
+    res.json(JSON.stringify(alunos))
 });
 
 app.get("/aluno/:id", (req, res) => {
