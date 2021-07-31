@@ -1,20 +1,33 @@
 const express = require('express');
 const app = express();
+const bodyParser = require("body-parser");
 
-let consoleMethod = (req, res, next) => {
-    
-    console.log(req.method);
-    next();
-}
+let alunos = [{id: 0, nome: "Jose"},
+    {id: 1, nome: "Maria"},
+    {id: 2, nome: "Joao"},
+    {id: 3, nome: "Marcos"}]
 
-let hello = (req, res) => {
-    
-    res.send("Hello World");
-}
+app.use(bodyParser.urlencoded());
 
-app.use("/", consoleMethod);
-app.get("/", hello);
+app.get("/", (req, res) => {
 
-app.post("/", consoleMethod, hello);
+   res.send("Hello W")
+});
+
+app.get("/alunos", (req, res) => {
+    res.json(JSON.stringify(alunos))
+});
+
+app.get("/aluno", (req, res) => {
+    console.log(req.body);
+    let aluno = alunos[req.body.id]
+    res.json(aluno);
+});
+
+app.get("/aluno/:id", (req, res) => {
+    console.log(req.params.id);
+    let aluno = alunos[req.params.id]
+    res.json(aluno);
+});
 
 app.listen(3000, () => console.log('Server Running...'));
