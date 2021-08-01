@@ -1,18 +1,25 @@
+const PORT = 3001;
 const express = require('express');
+const bodyParser = require('body-parser');
+
 const app = express();
-const bodyParser = require("body-parser");
-const aluno = require("./routes/aluno")
 
+let posts = [
+   {id: "asdsad",
+   title: "Teste do Mutal",
+   description: "Descrição teste"
+   },
+]
 
-app.use(bodyParser.urlencoded());
+app.get("/all", (req,res)=>{
 
-app.use("/aluno", aluno);
-
-app.get("/", (req, res) => {
-
-   res.send("Hello W")
+   res.json(JSON.stringify(posts))
 });
 
+app.post("/new", (req,res)=>{ });
 
 
-app.listen(3000, () => console.log('Server Running...'));
+
+app.listen(PORT, () => {
+   console.log('Server running on port', PORT)
+});
