@@ -1,5 +1,7 @@
 const PORT = 3001;
+
 const express = require('express');
+
 const bodyParser = require('body-parser');
 
 const app = express();
@@ -30,6 +32,8 @@ app.post("/new", bodyParser.json(), (req,res)=>{
 
 
 
+
+
 app.listen(PORT, () => {
    console.log('Server running on port', PORT)
 });
@@ -37,3 +41,5 @@ app.listen(PORT, () => {
 function generateID (){
     return Math.random().toString(36).substr(2, 9);
 }
+
+//atualization
