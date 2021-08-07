@@ -27,6 +27,7 @@ function updatePosts(){
 
         document.getElementById("posts").innerHTML = postElements;
     });
+    
 }
 
 function newPost(){
