@@ -4,12 +4,27 @@ const app = express();
 
 let user = {
     id: 0,
-    name: 'João',
+    name: 'João Assis',
     phone: '(47) 978695843',
-}
+};
+
+function render(data, obj){
+
+    for(let key in obj){
+        data = data.replace(`{{{${key}}}}`, obj[key]);
+    }
+
+    return data;
+};
 
 app.get('/', (req, res) => {
-    
+
+        fs.readFile('./templates/user.html', 'UTF8', (err, data) => {
+            if (!err) {
+
+                res.send(render(data, user));
+            }
+        })
 });
 
 app. listen (3000, () => {
