@@ -29,6 +29,8 @@ app.get('/', (req, res) => {
     res.render('user', {users});
 
     
+
+    
 });
 
 app.get('/about', (req, res) => {
