@@ -1,4 +1,5 @@
 import React, { useState } from 'react'
+import List from './List'
 import './Todo.css'
 
 function Todo(){
@@ -26,12 +27,12 @@ function Todo(){
                     <button onClick={addItem}>Add</button>
                 </form>
 
-                <ul>
-                    {itens.map(item=><li>{item}</li>)}
-                </ul>
+                <List itens={itens}></List>
             </div>);
 
 }
+
+
 
 
 
