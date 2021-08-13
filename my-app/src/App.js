@@ -6,8 +6,7 @@ import './App.css';
 function App() {
   return (
     <div>
-    <Header name="JC" links={["Sobre", "Comprar", "Contato", "Login"]}></Header>
-    <Counter count={5}></Counter>
+    <Counter count={3}></Counter>
     </div>
   );
 }
